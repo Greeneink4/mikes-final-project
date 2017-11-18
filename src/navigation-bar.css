@@ -1,8 +1,7 @@
 
 .app-bar {
     border: 1px solid black;
-    vertical-align: middle;
-    background-color: darkseagreen;
+    background-color: rgb(25, 96, 25);
  }
 .app-bar-title {
     color: #424242;

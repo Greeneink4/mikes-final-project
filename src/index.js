@@ -23,9 +23,9 @@ ReactDOM.render((
                 <Route path="/difficult" component={DifficultTrails}/>
             </Switch>
         </BrowserRouter>
-        <EasyTrails/>
+{/*         <EasyTrails/>
         <ModerateTrails/>
-        <DifficultTrails/>
+        <DifficultTrails/> */}
     </MuiThemeProvider>
 
 ), document.getElementById('root'));
