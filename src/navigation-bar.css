@@ -2,7 +2,6 @@
 .app-bar {
     border: 1px solid black;
     vertical-align: middle;
-    background-color: darkseagreen;
  }
 .app-bar-title {
     color: #424242;
@@ -18,6 +17,8 @@
 .app-bar-title:first-letter {
     text-transform: uppercase;
 }
+
+
 /*.navigation-bar {*/
     /*color: #424242;*/
     /*font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;*/

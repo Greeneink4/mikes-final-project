@@ -1,0 +1,14 @@
+.quote {
+    width: 650px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+}
+
+.quote h2 {
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 28px;
+    margin-top: 300px;
+}

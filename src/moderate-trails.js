@@ -2,7 +2,7 @@ import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
-import './moderate-trails.css';
+import './moderate.css';
 
 export default class ModerateTrails extends React.Component {
 
@@ -34,6 +34,7 @@ export default class ModerateTrails extends React.Component {
                     <MenuItem onClick={this.handleClose}>Rojo</MenuItem>
                     <MenuItem onClick={this.handleClose}>Ships</MenuItem>
                     <MenuItem onClick={this.handleClose}>Dinosaur Trackway</MenuItem>
+                    <MenuItem onClick={this.handleClose}>Handsome Cabin Boy</MenuItem>
                 </Drawer>
             </div>
         );

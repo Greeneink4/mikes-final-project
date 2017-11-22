@@ -2,7 +2,7 @@ import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
-import './difficult-trails.css';
+import './difficult.css';
 
 export default class DifficultTrails extends React.Component {
 
@@ -14,6 +14,8 @@ export default class DifficultTrails extends React.Component {
     handleToggle = () => this.setState({open: !this.state.open});
 
     handleClose = () => this.setState({open: false});
+        // TODO: get trail by trailId
+        // route to TrailDetails and pass the trail info through a prop
 
     render() {
         return (

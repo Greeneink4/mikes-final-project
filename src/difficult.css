@@ -1,0 +1,7 @@
+.difficult {
+    display: flex;
+    padding: 5px;
+    margin: 10px;
+    position: inherit;
+    float: left;
+}
