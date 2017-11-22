@@ -1,4 +1,7 @@
+
+import React from 'react';
 import axios from 'axios';
+
 
 export default function getTrailByLatLon(lat, lon) {
     axios.get('https://www.hikingproject.com/data/get-trails', {
@@ -10,14 +13,21 @@ export default function getTrailByLatLon(lat, lon) {
             maxResults: 10
         },
         headers: {
-            'Content-type': 'application/json'
+
+            // 'Content-type': 'application/json'
         }
     })
 
-        .then(function (response) {
-            return response
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+
+    // 'Content-type': 'application/jason'
+
+
 }
+
+//         .then(function (response) {
+//             return response
+//         })
+//         .catch(function (error) {
+//             console.log(error);
+//         });
+// }

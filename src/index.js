@@ -6,7 +6,7 @@ import EasyTrails from './easy-trails';
 import ModerateTrails from './moderate-trails';
 import DifficultTrails from './difficult-trails';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-// import TrailDetails from './trail-details';
+import TrailDetails from './trail-details';
 import './index.css';
 import App from './App';
 //import registerServiceWorker from './registerServiceWorker';
@@ -22,7 +22,7 @@ ReactDOM.render((
                 <Route path="/easy" component={EasyTrails}/>
                 <Route path="/moderate" component={ModerateTrails}/>
                 <Route path="/difficult" component={DifficultTrails}/>
-                {/*<Route path="/trail-details" component={TrailDetails}/>*/}
+                <Route path="/trail-details" component={TrailDetails}/>
             </Switch>
         </BrowserRouter>
     </MuiThemeProvider>

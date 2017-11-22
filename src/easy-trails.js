@@ -2,8 +2,10 @@ import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
-import './easy.css';
-import getTrailByLatLon from './services/get-trails';
+import getTrailByLatLon from './services/get-trails'
+import './easy-trails.css';
+import './easy-trails.css';
+
 
 export default class EasyTrails extends React.Component {
 
@@ -14,12 +16,12 @@ export default class EasyTrails extends React.Component {
 
     handleToggle = () => this.setState({open: !this.state.open});
 
-    handleClose = () => this.setState({open: false});
-
+    handleClose = (getTrail) => this.setState({ open: false });
+    
     getTrail = () => {
         console.log(getTrailByLatLon(37.4283453, -110.9884326))
         //   lat: 37.4283453,
-        //  lon: -110.9884326,
+        // lon: -110.9884326,
     }
 
     render() {
@@ -34,6 +36,7 @@ export default class EasyTrails extends React.Component {
                     {/*label="GetTrailData"*/}
                     {/*onClick={this.getTrail}*/}
                 {/*/>*/}
+
 
                 <Drawer
                     docked={false}
