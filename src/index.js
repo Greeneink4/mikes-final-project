@@ -21,19 +21,15 @@ import App from './App';
 
 const client = new ApolloClient({
     link: new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjahc39by157a0179fy5qmjwy' }),
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
+    connectToDevTools: process.env.NODE_ENV === 'development',
+    dataIdFromObject: o => o.id
     });
-    // cache: new InMemoryCache(),
-    // connectToDevTools: process.env.NODE_ENV === 'development',
-    // dataIdFromObject: o => o.id
-// });
-
 
 
 ReactDOM.render(
     <MuiThemeProvider>
         <ApolloProvider client={client}>
-            {/* <App /> */}    
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={App}/>
@@ -48,16 +44,6 @@ ReactDOM.render(
 document.getElementById('root')
 )
 
-
-
-
-
-
-
-// ReactDOM.render(
-    // <ApolloProvider client={client}>
-    //    <App />
-    // </ApolloProvider>,    
-    
+  
 
 //registerServiceWorker();
