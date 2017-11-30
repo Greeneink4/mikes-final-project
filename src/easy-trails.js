@@ -1,17 +1,18 @@
 import React from 'react';
-import Drawer from 'material-ui/Drawer';
+import Paper from 'material-ui/Paper';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import getTrailByLatLon from './services/get-trails'
+import NavigationBar from './navigation-bar';
 import './easy-trails.css';
-import './easy-trails.css';
+import { Menu } from 'material-ui/Menu';
 
 
 export default class EasyTrails extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {open: false};
+        this.state = {open: true};
     }
 
     handleToggle = () => this.setState({open: !this.state.open});
@@ -25,25 +26,16 @@ export default class EasyTrails extends React.Component {
     }
 
     render() {
+        const style = {
+            display: 'inline-block',
+            margin: '16px 32px 16px 0',
+        };
         return (
             <div>
-                <RaisedButton
-                    label="Easy"
-                    onClick={this.handleToggle}
-                />
+                <NavigationBar /> 
 
-                {/*<RaisedButton*/}
-                    {/*label="GetTrailData"*/}
-                    {/*onClick={this.getTrail}*/}
-                {/*/>*/}
-
-
-                <Drawer
-                    docked={false}
-                    width={200}
-                    open={this.state.open}
-                    onRequestChange={(open) => this.setState({open})}
-                >
+                <Paper style={style}>
+                <Menu>
                     <MenuItem onClick={this.handleClose}>The Sound of Silence</MenuItem>
                     <MenuItem onClick={this.handleClose}>The Old Ski Tow</MenuItem>
                     <MenuItem onClick={this.handleClose}>Dry Fork Rock Art</MenuItem>
@@ -52,7 +44,8 @@ export default class EasyTrails extends React.Component {
                     <MenuItem onClick={this.handleClose}>Eagle Ridge</MenuItem>
                     <MenuItem onClick={this.handleClose}>Desert Voices</MenuItem>
                     <MenuItem onClick={this.handleClose}>Split Mountain Scenic</MenuItem>
-                </Drawer>
+                    </Menu>
+                </Paper>    
             </div>
         );
     }

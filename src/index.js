@@ -11,6 +11,7 @@ import EasyTrails from './easy-trails';
 import ModerateTrails from './moderate-trails';
 import DifficultTrails from './difficult-trails';
 import TrailDetails from './trail-details';
+import NavigationBar from './navigation-bar';
 import './index.css';
 import App from './App';
 //import registerServiceWorker from './registerServiceWorker';
@@ -31,7 +32,8 @@ ReactDOM.render(
     <MuiThemeProvider>
         <ApolloProvider client={client}>
         <BrowserRouter>
-            <Switch>
+                <Switch>
+                {/* <NavigationBar/>     */}
                 <Route exact path="/" component={App}/>
                 <Route path="/easy" component={EasyTrails}/>
                 <Route path="/moderate" component={ModerateTrails}/>
