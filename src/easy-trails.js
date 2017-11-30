@@ -11,7 +11,7 @@ export default class EasyTrails extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {open: false};
+        this.state = {open: true};
     }
 
     handleToggle = () => this.setState({open: !this.state.open});
