@@ -33,7 +33,7 @@ ReactDOM.render(
         <ApolloProvider client={client}>
         <BrowserRouter>
                 <Switch>
-                <NavigationBar/>    
+                {/* <NavigationBar/>     */}
                 <Route exact path="/" component={App}/>
                 <Route path="/easy" component={EasyTrails}/>
                 <Route path="/moderate" component={ModerateTrails}/>

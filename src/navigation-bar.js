@@ -20,7 +20,8 @@ class NavigationBar extends Component {
             <AppBar className="app-bar"
                 style={{ backgroundColor: green500 }}
                 title={<div className="app-bar-title">Hike Uintah Basin Trails</div>}
-                iconElementLeft={<IconMenu
+                iconElementLeft={
+                    <IconMenu
                     iconButtonElement={<IconButton><MenuIcon /></IconButton>}
                     anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
                     targetOrigin={{ horizontal: 'left', vertical: 'top' }}
@@ -29,14 +30,10 @@ class NavigationBar extends Component {
                     <MenuItem value="1" primaryText="Easy"/>
                     <MenuItem value="2" primaryText="Moderate" />
                     <MenuItem value="3" primaryText="Difficult" />
-                </IconMenu>}
-                onLeftIconButtonTouchTap={this.handleLeftMenuTouch}
+                    </IconMenu>
+                }
             />
         )
-    }
-
-    handleLeftMenuTouch = () => {
-        console.log("Thanks for clicking!")
     }
 
     handleRouteNav = (event, value) => {
