@@ -1,7 +1,7 @@
 import React from 'react';
-import Drawer from 'material-ui/Drawer';
+import Paper from 'material-ui/Paper'
+import { Menu } from 'material-ui/Menu'
 import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
 import './difficult.css';
 
 export default class DifficultTrails extends React.Component {
@@ -17,24 +17,23 @@ export default class DifficultTrails extends React.Component {
         // TODO: get trail by trailId
         // route to TrailDetails and pass the trail info through a prop
 
-    render() {
-        return (
-            <div>
-                <RaisedButton
-                    label="Difficult"
-                    onClick={this.handleToggle}
-                />
-                <Drawer
-                    docked={false}
-                    width={200}
-                    open={this.state.open}
-                    onRequestChange={(open) => this.setState({open})}
-                >
-                    <MenuItem onClick={this.handleClose}>Kings Peak</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Gull Lake/Lake Mtn.</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Moonshine</MenuItem>
-                </Drawer>
-            </div>
-        );
+        render() {
+            const style = {
+                display: 'inline-block',
+                margin: '200px auto',
+                background: 'lightgreen',
+    
+            };
+            return (
+                <div>
+                    <Paper style={style}>
+                        <Menu>
+                            <MenuItem onClick={this.handleClose}>Kings Peak</MenuItem>
+                            <MenuItem onClick={this.handleClose}>Gull Lake/Lake Mtn.</MenuItem>
+                            <MenuItem onClick={this.handleClose}>Moonshine</MenuItem>
+                        </Menu>
+                    </Paper>    
+                </div>
+            );
+        }
     }
-}

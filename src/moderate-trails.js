@@ -1,7 +1,7 @@
 import React from 'react';
-import Drawer from 'material-ui/Drawer';
+import Paper from 'material-ui/Paper'
 import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
+import { Menu } from 'material-ui/Menu'
 import './moderate.css';
 
 export default class ModerateTrails extends React.Component {
@@ -16,18 +16,16 @@ export default class ModerateTrails extends React.Component {
     handleClose = () => this.setState({open: false});
 
     render() {
+        const style = {
+            display: 'inline-block',
+            margin: '200px auto',
+            background: 'lightgreen',
+
+        };
         return (
             <div>
-                <RaisedButton
-                    label="Moderate"
-                    onClick={this.handleToggle}
-                />
-                <Drawer
-                    docked={false}
-                    width={200}
-                    open={this.state.open}
-                    onRequestChange={(open) => this.setState({open})}
-                >
+                <Paper style={style}>
+                    <Menu>
                     <MenuItem onClick={this.handleClose}>Jones Hole</MenuItem>
                     <MenuItem onClick={this.handleClose}>Little Hole</MenuItem>
                     <MenuItem onClick={this.handleClose}>Asphalt Ridge</MenuItem>
@@ -35,7 +33,8 @@ export default class ModerateTrails extends React.Component {
                     <MenuItem onClick={this.handleClose}>Ships</MenuItem>
                     <MenuItem onClick={this.handleClose}>Dinosaur Trackway</MenuItem>
                     <MenuItem onClick={this.handleClose}>Handsome Cabin Boy</MenuItem>
-                </Drawer>
+                    </Menu>
+                </Paper>    
             </div>
         );
     }

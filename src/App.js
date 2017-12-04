@@ -1,32 +1,18 @@
-import React, { Component } from 'react';
-import NavigationBar from './navigation-bar';
-import EasyTrails from './easy-trails';
-import ModerateTrails from './moderate-trails';
-import DifficultTrails from './difficult-trails';
-import Quote from './quote';
-import './App.css';
+import React, { Component } from 'react'
+// import NavigationBar from './navigation-bar';
+import './App.css'
 
 
 export default class App extends Component {
     render() {
         return (
-             <div className="navigation-menu">
-                   <NavigationBar/>
-                 <hr/>
-                 <div className="easy">
-                     <EasyTrails/>
-                 </div>
-                 <div className="moderate">
-                     <ModerateTrails/>
-                 </div>
-                 <div className="difficult">
-                     <DifficultTrails/>
-                 </div>
-               <div>
-                   <Quote/>
-               </div>
-                 </div>
+            <div>
+                <div className= 'details'>
+                {/* <h2>A project to highlight the world class hiking trails in the Uintah Basin.</h2> */}
+                </div>                
+            </div>
         );
-    }
+    };
 }
+
 
