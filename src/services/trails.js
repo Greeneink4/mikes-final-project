@@ -7,6 +7,8 @@ let getTrailsUrl = 'https://www.hikingproject.com/data/get-trails?lat=40.2249632
  * @param difficultyLevelsFilter
  * @param cb
  */
+
+//Promise function .then
 export const getTrails = (difficultyLevelsFilter) => {
     return new Promise((resolve, reject) => {
         axios.get(getTrailsUrl).then(({data}) => {

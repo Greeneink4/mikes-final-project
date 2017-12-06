@@ -11,9 +11,10 @@ class EasyTrails extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {open: true, trails: []};
+        this.state = {open: true, trails: []}; //Setting trails to empty array
+        //getTrails function and set trails in state
         getTrails(['green', 'greenBlue']).then(trails => this.setState({trails: trails}));
-    }
+    }  //setState changes the state to render only the green and greenblue trails
 
     goToTrailDetailsPage = (trail) => {
         debugger;
@@ -27,7 +28,7 @@ class EasyTrails extends React.Component {
                 <div className='easy-details'>
                     <h2>Easy Trails</h2>
                     <MenuItemList trails={this.state.trails} goToTrailDetailsPage={this.goToTrailDetailsPage} />
-                </div>
+                </div> 
             </div>
         );
     }

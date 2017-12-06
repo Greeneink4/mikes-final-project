@@ -25,7 +25,8 @@
     padding: auto;
     margin: 10px auto;
     color: black;
-    font-size: 75px;
+    font-size: 50px;
     font-weight: normal;
-    letter-spacing: .1em;
+    border: 1px solid black;
+
 }

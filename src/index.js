@@ -14,14 +14,13 @@ import './index.css';
 import App from './App';
 
 
-const httpLink = new HttpLink({ uri: 'http://api.graph.cool/simple/v1/cjaaildq800990105rdvkq0wa'})
+export const httpLink = new HttpLink({ 
+    uri: 'http://api.graph.cool/simple/v1/cjaaildq800990105rdvkq0wa'})
 
 const client = new ApolloClient({
-    connectToDevTools: true,
     link: httpLink,
     cache: new InMemoryCache()
     })
-
 
 ReactDOM.render(
     <MuiThemeProvider>
@@ -39,7 +38,6 @@ ReactDOM.render(
     </MuiThemeProvider>,
 document.getElementById('root')
 )
-
   
 
 

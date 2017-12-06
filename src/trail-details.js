@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './moderate.css';
 import NavigationBar from './navigation-bar';
 import {TrailForm} from './trail-form';
-
+// import {HttpLink} from './index';
+import './trail-details.css';
+import './moderate.css';
 
 class TrailDetails extends Component {
 
@@ -14,18 +15,31 @@ class TrailDetails extends Component {
 
     }
 
+    updateHikedTrail = () => {
+        //update database
+    }
+
+    updateComments = () => {
+        //update database
+    }
+
+
     render() {
         return (
             <div>
                 <NavigationBar />
-                <h1>{this.state.trail.name}</h1>
-                <img src={this.state.trail.imgSmallMed} alt="The mountains are calling."/>
-                <p>Description{this.state.trail.description}</p>
-                <p>Difficulty: {this.state.trail.difficulty}</p>
-                <p>Type: {this.state.trail.type}</p>
-                <p>Longitude: {this.state.trail.longitude}</p>
-                <p>Latitude: {this.state.trail.latitude}</p>
-                <TrailForm />
+                <div className= 'trail-details'>
+                    <h1>{this.state.trail.name}</h1>
+                    <img src={this.state.trail.imgSmallMed} alt="The mountains are calling."/>
+                    <p><strong>{this.state.trail.summary}</strong></p>
+                    <p>Difficulty: {this.state.trail.difficulty}</p>
+                    <p>Stars: {this.state.trail.stars}</p>
+                    <p>Location: {this.state.trail.location}</p>
+                    <p>Length: {this.state.trail.length}</p>
+                    <p>Low: {this.state.trail.high}</p>
+                    <p>High: {this.state.trail.low}</p>
+                    <TrailForm updateHikedTrail={this.updateHikedTrail} updateComments={this.updateComments} />
+                </div>
             </div>
         )
     }
