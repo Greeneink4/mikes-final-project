@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from 'material-ui/Paper'
 import { Menu } from 'material-ui/Menu'
 import MenuItem from 'material-ui/MenuItem';
-import './difficult.css';
+import NavigationBar from './navigation-bar';
 
 export default class DifficultTrails extends React.Component {
 
@@ -26,6 +26,7 @@ export default class DifficultTrails extends React.Component {
             };
             return (
                 <div>
+                    <NavigationBar />
                     <Paper style={style}>
                         <Menu>
                             <MenuItem onClick={this.handleClose}>Kings Peak</MenuItem>

@@ -1,6 +1,31 @@
-.easy {
-    display: flex;
-    padding: 5px;
-    margin: 10px;
+.easy-details {
     float: left;
+    Padding: auto;
+    margin: auto;
+   
+}
+/* .easy-details h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    color:black;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    letter-spacing: 0.2em;
+    width: 200px;
+    margin: 20px auto;
+    font-variant: small-caps;
+    
+} */
+
+.easy-details h2 {
+    display: flex;
+    justify-content: left;
+    align-content: top;
+    padding: auto;
+    margin: 10px auto;
+    color: black;
+    font-size: 75px;
+    font-weight: normal;
+    letter-spacing: .1em;
 }

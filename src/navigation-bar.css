@@ -1,20 +1,21 @@
 
 .app-bar {
-    border: 1px solid black;
+    border: 3px solid black;
     vertical-align: middle;
     background-color: rgb(25, 96, 25);
 
  }
 .app-bar-title {
-    color: #424242;
+    color: black;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
     letter-spacing: 0.3em;
     text-align: center;
     margin: 10px auto;
     padding: 1px;
     text-transform: lowercase;
-    font-size: 55px;
+    font-size: 60px;
     font-variant: small-caps;
+    font-weight: normal;
 }
 .app-bar-title:first-letter {
     text-transform: uppercase;

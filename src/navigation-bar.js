@@ -19,14 +19,14 @@ class NavigationBar extends Component {
                 iconElementLeft={
                   
                     <IconMenu
-                    iconButtonElement={<IconButton><MenuIcon /></IconButton>}
-                    anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-                    targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-                    onChange={this.handleRouteNav} 
-                >   
-                    <MenuItem value="1" primaryText="Easy Trails"/>
-                    <MenuItem value="2" primaryText="Moderate Trails" />
-                    <MenuItem value="3" primaryText="Difficult Trails" />
+                        iconButtonElement={<IconButton><MenuIcon /></IconButton>}
+                        anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+                        targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+                        onChange={this.handleRouteNav}
+                    >
+                        <MenuItem value="1" primaryText="Easy Trails"/>
+                        <MenuItem value="2" primaryText="Moderate Trails" />
+                        <MenuItem value="3" primaryText="Difficult Trails" />
                     </IconMenu>
                     
                 }

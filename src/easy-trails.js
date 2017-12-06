@@ -1,49 +1,36 @@
 import React from 'react';
-import Paper from 'material-ui/Paper';
-import MenuItem from 'material-ui/MenuItem';
-import getTrailByLatLon from './services/get-trails'
 import './easy-trails.css';
-import { Menu } from 'material-ui/Menu';
+import NavigationBar from './navigation-bar';
+import {MenuItemList} from './menu-item-list';
+import {getTrails} from './services/trails';
+import { withRouter } from 'react-router-dom';
+import './easy-trails.css';
 
 
-export default class EasyTrails extends React.Component {
+class EasyTrails extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {open: true};
+        this.state = {open: true, trails: []};
+        getTrails(['green', 'greenBlue']).then(trails => this.setState({trails: trails}));
     }
 
-    handleToggle = () => this.setState({open: !this.state.open});
-
-    handleClose = (getTrail) => this.setState({ open: false });
-    
-    getTrail = () => {
-        console.log(getTrailByLatLon(37.4283453, -110.9884326))
-        //   lat: 37.4283453,
-        // lon: -110.9884326,
+    goToTrailDetailsPage = (trail) => {
+        debugger;
+        this.props.history.push({pathname:'/trail-details', state: {trail: trail}})
     }
 
     render() {
-        const style = {
-            display: 'inline-block',
-            margin: '200px auto',
-            background: 'lightgreen',
-
-        };
         return (
             <div>
-                <Paper style={style}>
-                    <Menu>
-                        <MenuItem onClick={this.handleClose}>The Sound of Silence</MenuItem>
-                        <MenuItem onClick={this.handleClose}>The Old Ski Tow</MenuItem>
-                        <MenuItem onClick={this.handleClose}>Dry Fork Rock Art</MenuItem>
-                        <MenuItem onClick={this.handleClose}>Dry Fork Flume</MenuItem>                        
-                        <MenuItem onClick={this.handleClose}>Eagle Ridge</MenuItem>
-                        <MenuItem onClick={this.handleClose}>Desert Voices</MenuItem>
-                        <MenuItem onClick={this.handleClose}>Split Mountain Scenic</MenuItem>
-                    </Menu>
-                </Paper>    
+                <NavigationBar />
+                <div className='easy-details'>
+                    <h2>Easy Trails</h2>
+                    <MenuItemList trails={this.state.trails} goToTrailDetailsPage={this.goToTrailDetailsPage} />
+                </div>
             </div>
         );
     }
 }
+
+export default withRouter(EasyTrails)

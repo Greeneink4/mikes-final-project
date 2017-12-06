@@ -3,6 +3,7 @@ import Paper from 'material-ui/Paper'
 import MenuItem from 'material-ui/MenuItem';
 import { Menu } from 'material-ui/Menu'
 import './moderate.css';
+import NavigationBar from './navigation-bar';
 
 export default class ModerateTrails extends React.Component {
 
@@ -24,6 +25,7 @@ export default class ModerateTrails extends React.Component {
         };
         return (
             <div>
+                <NavigationBar />
                 <Paper style={style}>
                     <Menu>
                     <MenuItem onClick={this.handleClose}>Jones Hole</MenuItem>

@@ -1,5 +1,32 @@
 body {
     background: url(./images/sound-of-silence.JPG) no-repeat center center fixed;
     padding: 10px;
+    background-color: #2d251e;
+    color:white
 }
+.sub-heading {
+    padding: 0;
+    Margin: 40px auto;;
+    background-color: lightgrey;
+    width: 875px;
+}
+.sub-heading h2 {
+    color: black;
+    letter-spacing: .1em;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid black;
+    font-size: 20px;
+}
+/* .details h2 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: brown;
+    background-color: lightgrey;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    letter-spacing: 0.2em;
+    width: 1200px;
+    margin: 20px auto;
+} */
 
