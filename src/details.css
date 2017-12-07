@@ -1,0 +1,33 @@
+.details {
+    float: left;
+    Padding: auto;
+    margin: 20px auto;
+   
+}
+/* .easy-details h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    color:black;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    letter-spacing: 0.2em;
+    width: 200px;
+    margin: 20px auto;
+    font-variant: small-caps;
+    
+} */
+.details-header {
+    background-color: lightgrey;
+}
+
+.details h2 {
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    margin: 10px auto;
+    color: black;
+    font-size: 50px;
+    font-weight: normal;
+    border: 2px solid black;
+}

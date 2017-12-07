@@ -12,17 +12,17 @@ export const MenuItemList = ({trails, goToTrailDetailsPage}) => {
         )
     })
 
-    const style = {
-        display: 'inline-block',
-        margin: '200px auto',
-        background: 'white',
-        border: '1px solid black',
-        width: '250px',
-    }
+    // const style = {
+    //     margin: '200px auto',
+    //     background: 'lightgrey',
+    //     border: '1px solid black',
+    //     width: '375px',
+    // }
 
     if(trailElements && trailElements.length > 0)
         return (
-            <Paper style={style}>
+            <Paper> 
+                {/* style={style}>  */}
                 <Menu>
                     {trailElements}
                 </Menu>

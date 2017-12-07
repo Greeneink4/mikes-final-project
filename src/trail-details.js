@@ -3,7 +3,6 @@ import NavigationBar from './navigation-bar';
 import {TrailForm} from './trail-form';
 // import {HttpLink} from './index';
 import './trail-details.css';
-import './moderate.css';
 
 class TrailDetails extends Component {
 
@@ -30,7 +29,7 @@ class TrailDetails extends Component {
                 <NavigationBar />
                 <div className= 'trail-details'>
                     <h1>{this.state.trail.name}</h1>
-                    <img src={this.state.trail.imgSmallMed} alt="The mountains are calling."/>
+                    <img src={this.state.trail.imgSmallMed} alt=" "/>
                     <p><strong>{this.state.trail.summary}</strong></p>
                     <p>Difficulty: {this.state.trail.difficulty}</p>
                     <p>Stars: {this.state.trail.stars}</p>

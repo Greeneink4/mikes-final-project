@@ -1,10 +1,9 @@
 import React from 'react';
-import './easy-trails.css';
 import NavigationBar from './navigation-bar';
 import {MenuItemList} from './menu-item-list';
 import {getTrails} from './services/trails';
 import { withRouter } from 'react-router-dom';
-import './easy-trails.css';
+import './details.css';
 
 
 class EasyTrails extends React.Component {
@@ -25,9 +24,13 @@ class EasyTrails extends React.Component {
         return (
             <div>
                 <NavigationBar />
-                <div className='easy-details'>
-                    <h2>Easy Trails</h2>
-                    <MenuItemList trails={this.state.trails} goToTrailDetailsPage={this.goToTrailDetailsPage} />
+                <div className='details'>
+                    <div className='details-header'>
+                        <h2>Easy Trails</h2>
+                    </div>
+                    <div className= 'menu-list'>
+                        <MenuItemList trails={this.state.trails} goToTrailDetailsPage={this.goToTrailDetailsPage} />
+                    </div>
                 </div> 
             </div>
         );

@@ -1,40 +1,41 @@
 import React from 'react';
-import Paper from 'material-ui/Paper'
-import { Menu } from 'material-ui/Menu'
-import MenuItem from 'material-ui/MenuItem';
 import NavigationBar from './navigation-bar';
+import {MenuItemList} from './menu-item-list';
+import {getTrails} from './services/trails';
+import { withRouter } from 'react-router-dom';
+import './details.css';
 
-export default class DifficultTrails extends React.Component {
+
+
+class DifficultTrails extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {open: false};
+        this.state = {open: true, trails: []}; //Setting trails to empty array
+        //getTrails function and set trails in state
+        getTrails(['black']).then(trails => this.setState({trails: trails}));
+    }  //setState changes the state to render only the green and greenblue trails
+
+    goToTrailDetailsPage = (trail) => {
+        debugger;
+        this.props.history.push({pathname:'/trail-details', state: {trail: trail}})
     }
 
-    handleToggle = () => this.setState({open: !this.state.open});
-
-    handleClose = () => this.setState({open: false});
-        // TODO: get trail by trailId
-        // route to TrailDetails and pass the trail info through a prop
-
-        render() {
-            const style = {
-                display: 'inline-block',
-                margin: '200px auto',
-                background: 'lightgreen',
-    
-            };
-            return (
-                <div>
-                    <NavigationBar />
-                    <Paper style={style}>
-                        <Menu>
-                            <MenuItem onClick={this.handleClose}>Kings Peak</MenuItem>
-                            <MenuItem onClick={this.handleClose}>Gull Lake/Lake Mtn.</MenuItem>
-                            <MenuItem onClick={this.handleClose}>Moonshine</MenuItem>
-                        </Menu>
-                    </Paper>    
+    render() {
+        return (
+            <div>
+                <NavigationBar />
+                <div className='details'>
+                    <div className='details-header'>
+                        <h2>Difficult Trails</h2>
+                    </div>                     
+                    <div className= 'menu-list'>
+                        <MenuItemList trails={this.state.trails} goToTrailDetailsPage={this.goToTrailDetailsPage} />
+                    </div>
                 </div>
-            );
-        }
+            </div>
+        );
     }
+}
+
+export default withRouter(DifficultTrails)

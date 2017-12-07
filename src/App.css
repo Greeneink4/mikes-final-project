@@ -18,6 +18,11 @@ body {
     border: 1px solid black;
     font-size: 20px;
 }
+div[role=menu] {
+    background-color: lightgrey;
+    border: 2px solid black;
+    font-weight: bold;
+}
 /* .details h2 {
     display: flex;
     justify-content: center;

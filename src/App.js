@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import NavigationBar from './navigation-bar';
-// import { withRouter } from 'react-router-dom';
 import './App.css';
 
 
