@@ -27,7 +27,7 @@ class TrailDetails extends Component {
         return (
             <div>
                 <NavigationBar />
-                <div className= 'trail-details'>
+                        <div className= 'trail-details'>
                     <h1>{this.state.trail.name}</h1>
                     <img src={this.state.trail.imgSmallMed} alt=" "/>
                     <p><strong>{this.state.trail.summary}</strong></p>
